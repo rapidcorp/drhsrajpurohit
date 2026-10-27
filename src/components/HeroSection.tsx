@@ -1,4 +1,4 @@
-import { Shield, Award, Star } from "lucide-react";
+import { Shield, Award, Star, User } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
