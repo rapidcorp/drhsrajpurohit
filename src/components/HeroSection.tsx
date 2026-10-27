@@ -1,4 +1,4 @@
-import { Shield, Award, Star } from "lucide-react";
+import { Shield, Award, Star, User } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -14,6 +14,18 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20 text-center">
+        {/* Portrait placeholder — reserved slot; replace contents with photo when ready */}
+        <div
+          className="mx-auto mb-10 w-40 h-40 md:w-56 md:h-56 rounded-full border-2 border-accent/50 bg-primary/40 backdrop-blur-sm flex flex-col items-center justify-center gap-2 animate-fade-in"
+          style={{ animationDelay: "0.1s" }}
+          data-profile-photo-slot
+        >
+          <User className="w-10 h-10 md:w-14 md:h-14 text-accent/60" />
+          <span className="text-[11px] font-body tracking-widest uppercase text-primary-foreground/50">
+            Photo
+          </span>
+        </div>
+
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <Shield className="w-4 h-4 text-accent" />
