@@ -1,5 +1,6 @@
-import { Shield, Award, Star, User } from "lucide-react";
+import { Shield, Award, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import profilePhoto from "@/assets/profile-photo.png.asset.json";
 
 const HeroSection = () => {
   return (
@@ -14,16 +15,17 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20 text-center">
-        {/* Portrait placeholder — reserved slot; replace contents with photo when ready */}
+        {/* Portrait — original uploaded photo, unedited */}
         <div
-          className="mx-auto mb-10 w-40 h-40 md:w-56 md:h-56 rounded-full border-2 border-accent/50 bg-primary/40 backdrop-blur-sm flex flex-col items-center justify-center gap-2 animate-fade-in"
+          className="mx-auto mb-10 w-40 h-40 md:w-56 md:h-56 rounded-full border-2 border-accent/50 overflow-hidden animate-fade-in shadow-lg"
           style={{ animationDelay: "0.1s" }}
           data-profile-photo-slot
         >
-          <User className="w-10 h-10 md:w-14 md:h-14 text-accent/60" />
-          <span className="text-[11px] font-body tracking-widest uppercase text-primary-foreground/50">
-            Photo
-          </span>
+          <img
+            src={profilePhoto.url}
+            alt="Dr. Hanwant Singh Rajpurohit — Rajasthan Police portrait"
+            className="w-full h-full object-cover object-top"
+          />
         </div>
 
         {/* Badge */}
