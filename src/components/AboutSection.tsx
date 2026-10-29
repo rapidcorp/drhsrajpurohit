@@ -1,4 +1,15 @@
-import { User, MapPin, Calendar, Briefcase } from "lucide-react";
+import { User, MapPin, Calendar, Briefcase, BookOpen, Home, Dumbbell, Scale, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const bioFacts = [
+  { icon: Home, label: "Ancestral Village", value: "Pilowani (पिलोवणी), District Pali, Rajasthan" },
+  {
+    icon: Dumbbell,
+    label: "Sports",
+    value: "A lifelong sportsman — has taken part in boxing, volleyball, swimming and yoga at open and university level, including state and national-level events",
+  },
+  { icon: Scale, label: "Yoga Referee", value: "Has served as a national-level yoga referee (योग-निर्णायक)" },
+];
 
 const quickInfo = [
   { icon: User, label: "Father's Name", value: "Shri Onkar Singh" },
@@ -47,6 +58,39 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
+
+          {/* From the Author's Biography — sourced from Saras Yoga (2025) */}
+          <aside
+            aria-labelledby="author-bio-heading"
+            className="mt-12 p-8 rounded-lg bg-card border border-accent/30 border-l-4 border-l-accent"
+          >
+            <div className="flex items-center gap-3 mb-5">
+              <BookOpen className="w-5 h-5 text-accent" aria-hidden="true" />
+              <h3 id="author-bio-heading" className="font-display text-2xl font-semibold text-foreground">
+                From the Author's Biography <span lang="hi" className="text-accent text-xl">लेखक परिचय</span>
+              </h3>
+            </div>
+            <ul className="space-y-4">
+              {bioFacts.map((f) => (
+                <li key={f.label} className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-accent/10 flex items-center justify-center">
+                    <f.icon className="w-4 h-4 text-accent" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-body font-medium text-muted-foreground">{f.label}</p>
+                    <p className="text-base font-body text-foreground">{f.value}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs font-body text-muted-foreground mt-6">
+              As described in his 2025 book{" "}
+              <Link to="/books/saras-yoga" className="text-accent underline-offset-4 hover:underline inline-flex items-center gap-1">
+                Saras Yoga (सरस योग) <ArrowRight className="w-3 h-3" aria-hidden="true" />
+              </Link>
+              .
+            </p>
+          </aside>
         </div>
       </div>
     </section>
