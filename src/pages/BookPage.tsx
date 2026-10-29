@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, BookOpen } from "lucide-react";
-import pdfAsset from "@/assets/saras-yoga.pdf.asset.json";
+const pdfUrl = "/saras-yoga.pdf";
 
 const bookJsonLd = {
   "@context": "https://schema.org",
@@ -54,7 +54,7 @@ const BookPage = () => {
             </p>
           </div>
           <a
-            href={pdfAsset.url}
+            href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border border-accent/40 text-accent font-body font-semibold px-5 py-2.5 rounded-lg hover:bg-accent/10 transition-colors"
@@ -68,7 +68,7 @@ const BookPage = () => {
       <div className="container mx-auto px-6 py-8">
         <div className="rounded-lg overflow-hidden border border-border bg-card shadow-xl">
           <iframe
-            src={pdfAsset.url}
+            src={pdfUrl}
             title="Saras Yoga (सरस योग) — full book PDF reader"
             className="w-full"
             style={{ height: "80vh" }}

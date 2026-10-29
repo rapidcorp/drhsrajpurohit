@@ -1,6 +1,6 @@
 import { Shield, Award, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import profilePhoto from "@/assets/profile-photo.png.asset.json";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const HeroSection = () => {
   return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
           data-profile-photo-slot
         >
           <img
-            src={profilePhoto.url}
+            src={profilePhoto}
             alt="Dr. Hanwant Singh Rajpurohit — Rajasthan Police portrait"
             className="w-full h-full object-cover object-top"
           />

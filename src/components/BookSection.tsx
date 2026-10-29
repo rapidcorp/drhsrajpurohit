@@ -1,6 +1,6 @@
 import { BookOpen, Building2, Hash, Calendar, IndianRupee, FileText, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import coverAsset from "@/assets/saras-yoga-cover.png.asset.json";
+import coverAsset from "@/assets/saras-yoga-cover.png";
 
 const details = [
   { icon: BookOpen, label: "Title / शीर्षक", value: "सरस योग (Saras Yoga)" },
@@ -29,7 +29,7 @@ const BookSection = () => {
             <div className="mx-auto md:mx-0 w-full max-w-[340px]">
               <div className="rounded-lg overflow-hidden border border-border shadow-xl bg-card">
                 <img
-                  src={coverAsset.url}
+                  src={coverAsset}
                   alt="Front cover of the book Saras Yoga by Dr. Hanvant Singh Rajpurohit"
                   className="w-full h-auto block"
                   loading="lazy"
