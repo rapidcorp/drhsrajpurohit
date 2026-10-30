@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2137"/>
+      <stop offset="50%" stop-color="#091422"/>
+      <stop offset="100%" stop-color="#050a12"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fae084"/>
+      <stop offset="35%" stop-color="#e5aa38"/>
+      <stop offset="70%" stop-color="#cb8d1d"/>
+      <stop offset="100%" stop-color="#9a6509"/>
+    </linearGradient>
+    <linearGradient id="goldInner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf0b0"/>
+      <stop offset="100%" stop-color="#df9e28"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="248" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="244" fill="none" stroke="url(#gold)" stroke-width="6"/>
+
+  <!-- Inner delicate ring -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="url(#gold)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+
+  <!-- Shield with Shadow -->
+  <g filter="url(#shadow)">
+    <!-- Outer Shield -->
+    <path d="M 256 95
+             C 328 95 385 125 385 190
+             C 385 305 256 395 256 415
+             C 256 395 127 305 127 190
+             C 127 125 184 95 256 95 Z"
+          fill="url(#gold)"/>
+
+    <!-- Inner Shield (Navy core) -->
+    <path d="M 256 113
+             C 318 113 367 139 367 195
+             C 367 294 256 373 256 390
+             C 256 373 145 294 145 195
+             C 145 139 194 113 256 113 Z"
+          fill="#0c1a2c"/>
+
+    <!-- Subtle inner shield rim -->
+    <path d="M 256 122
+             C 310 122 355 145 355 195
+             C 355 285 256 357 256 372
+             C 256 357 157 285 157 195
+             C 157 145 202 122 256 122 Z"
+          fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <!-- Central Star -->
+  <g transform="translate(256, 215) scale(0.95)">
+    <!-- 5-pointed faceted star -->
+    <!-- Point 1: Top (0, -75) -->
+    <!-- Point 2: Right Top (71, -23) -->
+    <!-- Point 3: Right Bottom (44, 61) -->
+    <!-- Point 4: Left Bottom (-44, 61) -->
+    <!-- Point 5: Left Top (-71, -23) -->
+    <!-- Inner points at radius 32: (0, 0) center -->
+    <polygon points="0,0 0,-75 22,-24" fill="#fae084"/>
+    <polygon points="0,0 0,-75 -22,-24" fill="#df9e28"/>
+
+    <polygon points="0,0 71,-23 27,9" fill="#fae084"/>
+    <polygon points="0,0 71,-23 22,-24" fill="#cb8d1d"/>
+
+    <polygon points="0,0 44,61 0,30" fill="#fae084"/>
+    <polygon points="0,0 44,61 27,9" fill="#9a6509"/>
+
+    <polygon points="0,0 -44,61 -27,9" fill="#fae084"/>
+    <polygon points="0,0 -44,61 0,30" fill="#cb8d1d"/>
+
+    <polygon points="0,0 -71,-23 -22,-24" fill="#fae084"/>
+    <polygon points="0,0 -71,-23 -27,9" fill="#9a6509"/>
+  </g>
+
+  <!-- Monogram text 'HSR' or star accent -->
+  <text x="256" y="338"
+        text-anchor="middle"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="44"
+        font-weight="bold"
+        letter-spacing="5"
+        fill="url(#goldInner)"
+        filter="url(#shadow)">HSR</text>
+
+  <!-- Laurel dots / stars accent at bottom -->
+  <circle cx="256" cy="358" r="3.5" fill="url(#gold)"/>
+  <circle cx="240" cy="357" r="2.5" fill="url(#gold)" opacity="0.8"/>
+  <circle cx="272" cy="357" r="2.5" fill="url(#gold)" opacity="0.8"/>
+</svg>
